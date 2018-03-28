@@ -1,4 +1,5 @@
 package WebtestingSeleniumHelpler;
+import org.eclipse.jetty.util.log.Log;
 import  org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -25,5 +26,11 @@ public class PrepareWebdriver {
 	}
 	
 	
+	public Log initLogger()
+	{
+		
+		return new Log();
+
+	}
 	
 }
