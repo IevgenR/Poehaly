@@ -5,14 +5,13 @@
     <classes>
       <class name="Webtesting.Test1">
         <methods>
-          <include name="afterTest"/>
+          <include name="GetTile"/>
           <include name="afterSuite"/>
+          <include name="afterTest"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>
-          <include name="beforeSuite"/>
           <include name="beforeMethod"/>
-          <include name="f"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- Webtesting.Test1 -->

@@ -3,6 +3,7 @@ package Webtesting;
 import org.testng.annotations.Test;
 
 import WebtestingSeleniumHelpler.PrepareWebdriver;
+import WebtestingSeleniumHelpler.*;
 import bsh.Console;
 
 import org.testng.annotations.BeforeMethod;
@@ -25,8 +26,11 @@ public class Test1 {
   @Test
   public void GetTile() {
 	  
+	  PrepareWebdriver prepare = new PrepareWebdriver();
+	  this.driver = prepare.initwebdriver();
+	  prepare.driver.get("http://lb.ua/");
 	  
-	  this.driver.getTitle();
+	 
 	 
 	  
   }
@@ -54,16 +58,10 @@ public class Test1 {
   public void afterTest() {
   }
 
-  @BeforeSuite
-  public void beforeSuite() {
-	  PrepareWebdriver prepare = new PrepareWebdriver();
-	  this.driver = prepare.initwebdriver();
-	  prepare.driver.get("http://www.ukr.net/");
-	  
-  }
 
   @AfterSuite
   public void afterSuite() {
+	  this.driver.close();
   }
 
 }
